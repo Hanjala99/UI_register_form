@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-5 Sec-left">
+						<img src="icon.png">
+						<h3>Join Us</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<button type="button" class="btn btn-primary">About us</button>
+					</div>
+					<div class="col-md-7 Sec-right">
+						<h2>Register Here</h2>
+						<div class="register-form">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Name" id="nameInpt">
+								<h6 id="nameCheck"></h6>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username" id="UserInpt">
+								<h6 id="usernameCheck"></h6>
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Email" id="emailInpt">
+								<h6 id="emailCheck"></h6>
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password" id="PassInpt">
+								<h6 id="passCheck"></h6>
+							</div>
+							<button type="button" class="btn btn-primary" id="registerbtn">Register</button>
+						</div>
+						<span>OR <a href="#">click here for login</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nameCheck').hide();
+			$('#usernameCheck').hide();
+			$('#emailCheck').hide();
+			$('#passCheck').hide();
+
+			var username_err = true;
+			var email_err = true;
+
+			$('#nameInpt').on('keyup',function(){
+				var name_val = $('#nameInpt').val();
+				if (name_val.length == '') {
+					$('#nameCheck').show();
+					$('#nameCheck').html("**please fill the name");
+					$('#nameCheck').css('color','red');
+				}else{
+					$('#nameCheck').hide();
+				}
+			});
+
+			$('#UserInpt').on('keyup',function(){
+				username_check();
+			});
+			function username_check(){
+				var username_val = $('#UserInpt').val();
+				if (username_val.length == '') {
+					$('#usernameCheck').show();
+					$('#usernameCheck').html("**please fill the username");
+					$('#usernameCheck').css('color','red');
+					username_err = false;
+					return false;
+				}else{
+					$('#usernameCheck').hide();
+				}
+				if ((username_val.length < 3) || (username_val.length > 10) ){
+					$('#usernameCheck').show();
+					$('#usernameCheck').html("**username length must be between 3 and 10");
+					$('#usernameCheck').css('color','red');
+					username_err = false;
+					return false;
+				}else{
+					$('#usernameCheck').hide();
+				}
+			}
+			
+			
+
+			  
+		});
+
+	</script>
+
+</body>
+</html>

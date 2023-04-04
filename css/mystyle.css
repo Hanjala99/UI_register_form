@@ -1,0 +1,85 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image: linear-gradient(to right, #ff5722, #ff9800);
+	margin-top: 43px !important;
+}
+.container{
+	margin-bottom: 50px;
+}
+.Sec-left{
+	text-align: center;
+	color: #fff;
+	padding: 30px;
+	height: 400px;
+}
+.Sec-left .btn-primary{
+	border-radius: 1.5rem;
+	border:none;
+	color: #000;
+	width: 120px;
+	background-color: #f8f8f8;
+	font-weight: 600;
+	margin-top: 20px;
+	padding: 10px;
+}
+.Sec-left .btn-primary:hover{
+	background-color: #000000;
+}
+.Sec-left img{
+	margin-top: 80px;
+	width: 80px;
+	height: 90px;
+	margin-bottom: 20px;
+	animation: mover 1s infinite alternate;
+}
+.Sec-left p{
+	padding: 20px 20px 0;
+}
+.Sec-right{
+	position: relative;
+	background-color: #f8f8f8;
+	padding: 50px;
+	border:none;
+	border-top-left-radius: 10% 50%;
+	border-bottom-left-radius: 10% 50%;
+}
+.Sec-right h2{
+	text-align: center;
+	color:  #555;
+	margin-bottom: 10px;
+}
+.register-form{
+	padding: 30px;
+}
+.Sec-right .btn-primary{
+	float: right;
+	border-radius: 1.5rem;
+	border:none;
+	width: 120px;
+	background-color: #ff9800;
+	font-weight: 600;
+	color: #fff;
+	margin-top: 20px;
+	padding: 10px;
+}
+.Sec-right .btn-primary:hover{
+	background-color:#ff5722;
+}
+.Sec-right .form-group{
+	margin-bottom: 23px
+}
+.Sec-right span{
+	float: right;
+	position: absolute;
+	margin-top: 50px;
+	right: 10px;
+	cursor: pointer;
+}
+@keyframes mover{
+	0%{transform: translateY(0);}
+	100%{transform: translateY(-20px);}
+}
